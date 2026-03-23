@@ -163,6 +163,8 @@ const CellPreview = styled.pre`
 `;
 
 const MapCard = styled(PanelCard)`
+  position: relative;
+  min-width: 0;
   padding: 0;
   overflow: hidden;
 `;
@@ -184,7 +186,11 @@ const MapHeader = styled.div`
 `;
 
 const MapFrame = styled(DemoContainer)`
+  position: relative;
+  width: 100%;
+  min-width: 0;
   height: min(76vh, 900px);
+  isolation: isolate;
 
   ${isMobile} {
     height: 60vh;

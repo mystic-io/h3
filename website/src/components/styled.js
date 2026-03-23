@@ -2,10 +2,26 @@ import styled from "styled-components";
 import { isMobile } from "./common";
 
 export const DemoContainer = styled.div`
+  position: relative;
+  width: 100%;
+  min-width: 0;
   height: 100%;
+  overflow: hidden;
+
   ${isMobile} {
     height: 40vh;
   }
+
+  > div,
+  > div > div {
+    width: 100%;
+    height: 100%;
+  }
+
+  canvas {
+    display: block;
+  }
+
   .tooltip,
   .deck-tooltip {
     position: absolute;
