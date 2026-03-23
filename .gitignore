@@ -60,6 +60,7 @@ dev-docs/_build/
 env_docs/
 node_modules/
 website/dist/
+website/static/generated/*.json
 website/package-lock.json
 website/.cache/
 website/public/

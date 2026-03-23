@@ -22,26 +22,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
-
-// Using GeoJSON version as it is easy to convert
-const SOURCE_URL = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson';
+const {SOURCE_URL, getSource} = require('./lib/natural_earth');
 const TARGET = process.argv[2];
-
-// Use Node HTTPS module for download, to avoid dependencies
-function getSource(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, (resp) => {
-      let data = '';
-      resp.on('data', (chunk) => {
-        data += chunk;
-      });
-      resp.on('end', () => {
-        resolve(data);
-      });
-    }).on('error', reject);
-  });
-}
 
 function degsToRads(deg) {
     return (deg * Math.PI) / 180;
@@ -196,6 +178,5 @@ END_BENCHMARKS();
 }
 
 makeCountries(SOURCE_URL, TARGET);
-
 
 

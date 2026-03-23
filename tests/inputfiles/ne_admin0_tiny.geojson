@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A3_EH": "CTR",
+        "ADM0_A3": "CTR",
+        "ADMIN": "Centerland"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 0],
+            [3, 0],
+            [3, 3],
+            [0, 3],
+            [0, 0]
+          ],
+          [
+            [1, 1],
+            [2, 1],
+            [2, 2],
+            [1, 2],
+            [1, 1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A3_EH": "-99",
+        "ADM0_A3": "ISL",
+        "ADMIN": "Island Union"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [5, 0],
+              [6, 0],
+              [6, 1],
+              [5, 1],
+              [5, 0]
+            ]
+          ],
+          [
+            [
+              [7, 0],
+              [8, 0],
+              [8, 1],
+              [7, 1],
+              [7, 0]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ISO_A3_EH": "BDR",
+        "ADM0_A3": "BDR",
+        "ADMIN": "Borderland"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [10.2, 0.2],
+            [11.2, 0.2],
+            [11.2, 1.2],
+            [10.2, 1.2],
+            [10.2, 0.2]
+          ]
+        ]
+      }
+    }
+  ]
+}
